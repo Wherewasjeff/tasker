@@ -12,7 +12,7 @@
 <div class="main">
     <div class="head">
         <div class="hpart">
-            <img src="asset/logo.png" href="cau"</img>
+            <img src="logo.png" href="cau">
         </div>
         <div class="hpart">
             <a href="main.php" class="butt">Home</a>
@@ -26,6 +26,9 @@
         <div class="hpart">
             <a href="tasks.php" class="butt">Tasks</a>
         </div>
+        <div class="hpart">
+            <a href="profile.php" class="butt">Profile</a>
+        </div>
         <div class="hpart2">
             <div class="logbutt">
                 <a href="login.php" class="butt">Log In</a>
@@ -37,8 +40,10 @@
             </div>
         </div>
     </div>
-    <h1 class="welcome">Welcome     To Tasker!</h1>
-    <p class="text">Our company, Tasker Technologies, was founded on the principle of simplifying project management for individuals and teams alike. We believe that everyone should have access to effective project management tools without the complexity and steep learning curves associated with many other platforms. With Tasker, you'll find an intuitive and feature-rich system that empowers you to create, organize, and complete projects with ease.</p>
 </div>
+
+
+
+
 </body>
 </html>

@@ -26,9 +26,6 @@
         <div class="hpart">
             <a href="tasks.php" class="butt">Tasks</a>
         </div>
-        <div class="hpart">
-            <a href="profile.php" class="butt">Profile</a>
-        </div>
         <div class="hpart2">
             <div class="logbutt">
                 <a href="login.php" class="butt">Log In</a>
@@ -41,43 +38,39 @@
         </div>
     </div>
     <div class="calb">
-        <div class="calhead">
-            <div class="name">
-                <p class="nametext">November 2023</p>
-            </div>
-        </div>
-        <div class="taskcat">
-            <div class="cat">Tasks</div>
-            <div class="cat">Description</div>
-            <div class="cat">Due Date</div>
-            <div class="cat">Progress</div>
-        </div>
-        <div class="task">
-            <div class="taskpart">Labdien</div>
-            <div class="taskpart"><p class="description">Labdien, kā iet, kā skokas, vai skolā labi? vai nesit?? vai labas atzīmes?</p></div>
-            <div class="taskpart">12/11/2023</div>
-            <div class="taskpart">
-                <div class="progressbar"></div>
-            </div>
-        </div>
-        <div class="calhead">
-            <div class="name">
-                <p class="nametext">December 2023</p>
-            </div>
-        </div>
-        <div class="taskcat">
-            <div class="cat">Title</div>
-            <div class="cat">Description</div>
-            <div class="cat">Due Date</div>
-            <div class="cat">Progress</div>
-        </div>
-        <div class="task">
-            <div class="taskpart"></div>
-            <div class="taskpart"></div>
-            <div class="taskpart"></div>
-            <div class="taskpart"></div>
-        </div>
+        <?php
+        include 'database.php';
 
+        $sql = "SELECT task_name, description, due_date, task_status FROM tasks ORDER BY due_date";
+        $result = $conn->query($sql);
+
+        $current_month = null;
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $due_date = new DateTime($row["due_date"]);
+                $month = $due_date->format('F Y');
+
+                if ($current_month !== $month) {
+                    // We're in a new month, so output the month header
+                    echo "<div class='calhead'><div class='name'><p class='nametext'>$month</p></div></div>";
+                    echo "<div class='taskcat'><div class='cat'>Tasks</div><div class='cat'>Description</div><div class='cat'>Due Date</div><div class='cat'>Progress</div></div>";
+                    $current_month = $month;
+                }
+
+                echo "<div class='task'>";
+                echo "<div class='taskpart'>" . $row["task_name"]. "</div>";
+                echo "<div class='taskpart'><p class='description'>" . $row["description"]. "</p></div>";
+                echo "<div class='taskpart'>" . $row["due_date"]. "</div>";
+                echo "<div class='taskpart'><div class='progressbar'>" . $row["task_status"]. "</div></div>";
+                echo "</div>";
+            }
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
     </div>
 </div>
 </body>
