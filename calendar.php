@@ -63,7 +63,13 @@
                 echo "<div class='taskpart'>" . $row["task_name"]. "</div>";
                 echo "<div class='taskpart'><p class='description'>" . $row["description"]. "</p></div>";
                 echo "<div class='taskpart'>" . $row["due_date"]. "</div>";
-                echo "<div class='taskpart'><div class='progressbar'>" . $row["task_status"]. "</div></div>";
+                echo "<div class='taskpart'><div class='progressbar'>";
+                if ($row["task_status"] === 'todo') {
+                    echo "<div class='progress inprogress'></div>";
+                } elseif ($row["task_status"] === 'done') {
+                    echo "<div class='progress done'></div>";
+                }
+                echo "</div></div>";
                 echo "</div>";
             }
         } else {
