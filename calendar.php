@@ -5,41 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="heading.css"></link>
+    <link rel="stylesheet" href="calendar.css"></link>
     <title>Document</title>
 </head>
 <body>
-<div class="main2">
-    <div class="head">
-        <div class="hpart">
-            <img src="asset/logo.png" href="cau"</img>
-        </div>
-        <div class="hpart">
-            <a href="main.php" class="butt">Home</a>
-        </div>
-        <div class="hpart">
-            <a href="newtask.php" class="butt">Add Task</a>
-        </div>
-        <div class="hpart">
-            <a href="calendar.php" class="butt">Calendar</a>
-        </div>
-        <div class="hpart">
-            <a href="tasks.php" class="butt">Tasks</a>
-        </div>
-        <div class="hpart2">
-            <div class="logbutt">
-                <a href="login.php" class="butt">Log In</a>
-            </div>
-        </div>
-        <div class="hpart2">
-            <div class="regbutt">
-                <a href="register.php" class="butt2">Sign Up</a>
-            </div>
-        </div>
-    </div>
-    <div class="calb">
+<?php
+include 'header.php';
+?>
+
+<div class="calb">
         <?php
-        include 'database.php';
+        include 'api/databaseCalendar.php';
 
         $sql = "SELECT task_name, description, due_date, task_status FROM tasks ORDER BY due_date";
         $result = $conn->query($sql);
@@ -47,13 +23,13 @@
         $current_month = null;
 
         if ($result->num_rows > 0) {
-            // output data of each row
+            
             while($row = $result->fetch_assoc()) {
                 $due_date = new DateTime($row["due_date"]);
                 $month = $due_date->format('F Y');
 
                 if ($current_month !== $month) {
-                    // We're in a new month, so output the month header
+                   
                     echo "<div class='calhead'><div class='name'><p class='nametext'>$month</p></div></div>";
                     echo "<div class='taskcat'><div class='cat'>Tasks</div><div class='cat'>Description</div><div class='cat'>Due Date</div><div class='cat'>Progress</div></div>";
                     $current_month = $month;
@@ -79,5 +55,7 @@
         ?>
     </div>
 </div>
+
+    
 </body>
 </html>

@@ -9,14 +9,14 @@ include("functions.php");
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-    //something was posted
+   
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     if(!empty($username) && !empty($password) && !is_numeric($username))
     {
 
-        //read from database
+        
         $query = "select * from login where username = '$username' limit 1";
         $result = mysqli_query($con, $query);
 
@@ -63,7 +63,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     <div style="margin-top:10%;" class="row">
                         <div class="circle">
                             <div class="row">
-                                <img style="width:130px; height130px;" src="logo.png" alt="">
+                                <img style="width:130px; height130px;" src="asset/logo.png" alt="">
                             </div>
                         </div>
                     </div>

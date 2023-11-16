@@ -45,15 +45,82 @@ body {
 
 .task-box{
     width:1100px;
-    height:200px;
+    height:100%;
+    border:solid;
+    background-color: rgb(250, 250, 244);
+    border-radius:3px;
+}
+
+.toDo{
+    width:500px;
+    height:100%;
+    min-height:600px;
     border:solid;
 
 }
+.done{
+    width:500px;
+    height:100%;
+    border:solid; 
+    min-height:600px;
+}
+
 .status{
-    width: 504px;
+width: 504px;
 height: 66px;
 border-radius: 20px;
 background: #D50046;
-
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.tasks{
+    width:420px;
+    height:320px;
+    border-radius: 38px;
+    border:solid;
+    border-color: #D50046;
+}
+
+.task-head{
+    width:100%;
+    height:90px;
+    background-color: #E6E4E4;
+    border-top-left-radius:38px;
+    border-top-right-radius:38px ;
+}
+
+.line {
+    border-top: 3px solid #000; 
+    display: block;
+    width: 80%; 
+}
+
+.profile{
+    width:80px;
+    height:85px;
+    border:solid;
+}
+.close{
+    width:80px;
+    height:85px;
+    border:solid;
+}
+.dot{
+    width:12px;
+    height:12px;
+    background-color: #FF00B8;
+    border-radius:50%;
+}
+.desc-box{
+    width:330px;
+    height:100%;
+    border:solid;
+
+}
+
+.next{
+    width: 85px;
+    height: 50px;
+    border:solid;
+
 }

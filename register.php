@@ -23,7 +23,7 @@ include("functions.php");
                 <div style="margin-top:10%;" class="row">
                     <div class="circle">
                         <div class="row">
-                            <img style="width:130px; height:130px;" src="logo.png" alt="">
+                            <img style="width:130px; height:130px;" src="asset/logo.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ include("functions.php");
                     formData.append('image', imageInput);
 
                     $.ajax({
-                        url: 'insert.php',
+                        url: 'api/insertRegister.php',
                         type: 'POST',
                         data: formData,
                         contentType: false,

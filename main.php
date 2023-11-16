@@ -42,7 +42,7 @@
 <div class="main">
     <div class="head">
         <div class="hpart">
-            <img src="logo.png" href="cau">
+            <img src="asset/logo.png" href="cau">
         </div>
         <div class="hpart">
             <a class="butt" onclick="showPopup('newtask.php')">Add Task</a>

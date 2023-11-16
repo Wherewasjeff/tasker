@@ -39,14 +39,20 @@ if ($stmt) {
 <body>
 <div class="main">
     <div class="head">
+   
+    <div  href="javascript:void(0)" class="burger-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
         <div class="hpart">
-            <img src="logo.png" href="cau">
+            <img src="asset/logo.png" href="cau">
         </div>
         <div class="hpart">
             <a href="index.php" class="butt">Home</a>
         </div>
         <div class="hpart">
-            <a href="newtask.php" class="butt">Add Task</a>
+            <a href="input.php" class="butt">Add Task</a>
         </div>
         <div class="hpart">
             <a href="calendar.php" class="butt">Calendar</a>
@@ -68,10 +74,21 @@ if ($stmt) {
                 <a class="butt" href="logout.php">Logout </a>
             </div>
         </div>
+        <div class="sidebar" id="mySidebar">
+        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()" style="border: none;">×</a>
+        <a href="index.php"style="margin-top:100px;background-color: white;">Home</a>
+        <a href="input.php"style="margin-top:20px;background-color: white;">New Task</a>
+        <a href="calendar.php" style="margin-top:20px;background-color: white;">Calendar</a>
+        <a href="tasks.php" style="margin-top:20px;background-color: white;">Tasks</a>
+
+        <a href="login.php" style="margin-top:100px;background-color: white;" >Log In</a>
+        <a href="register.php"  style="margin-top:20px;background-color: black;color: white;">Sign Up</a>
        
     </div>
+    </div>
     
-
+    <script src="script.js"></script>
 </body>
       
         

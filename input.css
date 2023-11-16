@@ -1,53 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@200;400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
 }
 
-    body {
-        background-image: url('https://cdn.discordapp.com/attachments/1169965501053681704/1171407154431926313/bg.jpg?ex=655c90ed&is=654a1bed&hm=4143212aa07e223397937122420cc6e6cc40e7ef3a5542be7b3f845ced9d3c5e&'); /* Replace 'your-image-file.jpg' with the actual image file path */
-        background-size: cover;
-        background-repeat: no-repeat; 
-        font-family: 'Inter', sans-serif;
-        
-    }
-
-.main{ 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.head{
-    width: 80%;
-    height: 75px;
-    background-color: white;
-    border-radius: 100px;
-    margin: 50px;
-    display: flex;
-    flex-direction: row;
-   
+.aplis{
+    display: none;
 }
 .hpart{
     width: 10%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .hpart2{
-    width: 25%;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-img{
-    height: 100%;
+.headimg{
+    height: 60%;
     width: 80%;
 }
 .butt{
@@ -66,7 +43,7 @@ a{
     text-decoration: none;
 }
 .logbutt{
-    border: 1px solid rgb(87, 86, 86);
+    border: 1px solid black;
     width: 80%;
     border-radius: 100px;
     height: 70%;
@@ -74,11 +51,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-      
-}
-.logbutt:hover {
-    background-color: #e02d16; 
 }
 .regbutt{
     width: 80%;
@@ -89,93 +61,120 @@ a{
     justify-content: center;
     align-items: center;
 }
-.welcome {
-    font-family: 'Inter', sans-serif;
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em BLACK;
-    font-size: 200%;
-}
-.text {
-    font-family: 'Inter', sans-serif;
-    color: white;
-    width: 80%;
-    margin: 5%;
-    text-align: center;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em BLACK;
-    font-size: 140%;
-
-}
-/*Calendar!!*/
-.main2{
-    width: 100%;
-    height: 150vh;
-    background-size: cover;
-    background-image: url("asset/bg.jpg");
-    background-color: #071013;
+/* box */
+.box{
+    justify-content: center;
     display: flex;
     align-items: center;
-    flex-direction: column;
-
-}
-.calb{
-    background-color:white;
+    color: white;
+    width: 45%;
+    height: 80%;
+    background-color: white;
     border-radius: 30px;
-    width: 80%;
-    height: 75%;
-    display: flex;
     flex-direction: column;
-    overflow: scroll;
+    
 }
-.calhead{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.name{
-    border: 1px solid black;
-    width: 30%;
-    border-radius: 100px;
-    height: 70%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nametext {
-        font-family: 'Inter', sans-serif;
-        color: black;
-        width: 80%;
-        margin: 5%;
-        text-align: center;
-        font-size: 140%;
 
-}
-.taskcat{
-    width: 100%;
-    height: 5%;
-    background-color: #D4D2D5;
-    display: flex;
-}
-.cat{
-    border: 1px solid black;
-    width: 10%;
-    border-radius: 100px;
-    height: 70%;
-    background-color: white;
-    display: flex;
+
+.logo{
     justify-content: center;
+    display: flex;
     align-items: center;
-    margin: auto;
-    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 20%;
+   
+    
+}
+.int{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65%;
+        color: #071013;
+    flex-direction: column ;
+    position: relative; /* To contain the sidebar */
 }
 .task{
     width: 100%;
-    height: 15%;
-    background-color: #D4D2D5;
+    height: 10%;
+    color: #071013;
     display: flex;
-    margin-top: 1%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+}
+.taskName{
+    width: 100%;
+    height: 20%;
+    justify-content: top;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.taskDesc{
+    width: 100%;
+    height: 20%;
+    justify-content: top;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.taskDate{
+    width: 100%;
+    height: 20%;
+    justify-content: top;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.taskStatus{
+    width: 100%;
+    height: 20%;
+    justify-content: top;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+.boxinput{
+    width: 50%;
+    height: 30%;
+    border-radius: 10px;
+}
+.boxlable{
+    width: 50%;
+    font-size: 15px;
+}
+.add{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+   
+}
+.boximg{
+    width: 15%;
+    height: 50%;
+}
+.pogaadd{
+    width: 15%;
+    height: 50%;
+    border-radius: 10px;
+    border:solid black 1px ;
+    background-color:#2B59C3;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+
+    
+}
+form{
+    width: 100%;
+    height: 100%;
 }
 /*sidebar*/
 .burger-icon {
@@ -296,9 +295,3 @@ a{
 
 
 }
-
-
-
-
-
-
