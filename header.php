@@ -23,6 +23,13 @@ if ($stmt) {
     
     die("Error in database query: " . $con->error);
 }
+
+
+$tasks_query = "SELECT * FROM tasks WHERE id = {$user_data['id']} AND task_status = 'todo'";
+$tasks_result = mysqli_query($con, $tasks_query);
+
+$done_tasks_query = "SELECT * FROM tasks WHERE id = {$user_data['id']} AND task_status = 'done'";
+$done_tasks_result = mysqli_query($con, $done_tasks_query);
 ?>
 
 <!doctype html>

@@ -273,11 +273,11 @@ a{
 
     
       .burger-icon {
-        display: block; /* Show the burger icon on smaller screens */
+        display: block; 
       }
     
       .bar {
-        background-color: #071013; /* Color of the bars */
+        background-color: #071013; 
       }
       .x{
         width: 100%;
