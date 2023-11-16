@@ -55,7 +55,7 @@
                 if ($current_month !== $month) {
                     // We're in a new month, so output the month header
                     echo "<div class='calhead'><div class='name'><p class='nametext'>$month</p></div></div>";
-                    echo "<div class='taskcat'><div class='cat'>Tasks</div><div class='cat'>Description</div><div class='cat'>Due Date</div><div class='cat'>Progress</div></div>";
+                    echo "<div class='taskcat'><div class='cat'>Name</div><div class='cat'>Description</div><div class='cat'>Due Date</div><div class='cat'>Progress</div></div>";
                     $current_month = $month;
                 }
 
@@ -67,7 +67,7 @@
                 if ($row["task_status"] === 'todo') {
                     echo "<div class='progress inprogress'></div>";
                 } elseif ($row["task_status"] === 'done') {
-                    echo "<div class='progress done'></div>";
+                    echo "<div class='progress done'>Done!</div>";
                 }
                 echo "</div></div>";
                 echo "</div>";
